@@ -1,0 +1,27 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+
+# env
+.env
+.env.*
+
+# logs
+*.log
+npm-debug.log*
+
+# coverage
+coverage/
+
+# editor
+.vscode/
+.idea/
+
+# os
+.DS_Store
+
+# internal — not for the public repo
+docs/
+modules/
