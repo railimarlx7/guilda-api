@@ -1,0 +1,9 @@
+#!/bin/sh
+
+branch_name="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+
+if [ "$branch_name" = "main" ]; then
+  echo "Bloqueado: commits diretos na branch main nao sao permitidos."
+  echo "Crie uma branch de trabalho e integre via pull request."
+  exit 1
+fi
