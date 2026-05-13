@@ -1,0 +1,9 @@
+#!/bin/sh
+
+branch_name="$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)"
+
+if [ "$branch_name" = "main" ]; then
+  echo "Bloqueado: push direto da branch main nao e permitido."
+  echo "Envie uma branch de trabalho e use pull request para atualizar a main."
+  exit 1
+fi

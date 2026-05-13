@@ -23,6 +23,22 @@ validação, regras de negócio e testes automatizados.
 
 ---
 
+## Protecao da branch main
+
+O repositorio inclui hooks locais em `.githooks/` que bloqueiam `commit` e `push`
+quando a branch atual e `main`.
+
+Para garantir a ativacao dos hooks neste clone:
+
+```bash
+npm run setup:hooks
+```
+
+Para proteger a `main` para toda a equipe, configure tambem a branch protection no GitHub
+e permita alteracoes somente via pull request.
+
+---
+
 ## Como executar
 
 ```bash

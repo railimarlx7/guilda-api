@@ -12,6 +12,8 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "setup:hooks": "git rev-parse --git-dir >/dev/null 2>&1 && git config core.hooksPath .githooks || true",
+    "prepare": "npm run setup:hooks",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "echo \"Sem testes — use guilda-api-tests para rodar a suite de testes\" && exit 1"
   },
